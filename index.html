@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Course Organizer – Home</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ===== HEADER / NAV ===== -->
+  <header>
+    <nav>
+      <a href="index.html" class="nav-logo">Course<span>Hub</span></a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="my-courses.html">My Courses</a></li>
+        <li><a href="add-course.html">Add Course</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ===== MAIN ===== -->
+  <main>
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-badge">Your Academic Dashboard</div>
+      <h1>Organize Your <span>Courses</span><br>Stay on Track</h1>
+      <p>A clean, personal space to manage all your university courses, track credit hours, and keep notes — all in one place.</p>
+      <div class="hero-btns">
+        <a href="my-courses.html" class="btn btn-primary">View My Courses</a>
+        <a href="add-course.html" class="btn btn-outline">Add a Course</a>
+      </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="stats">
+      <div class="stat-card">
+        <span class="number">5</span>
+        <span class="label">Current Courses</span>
+      </div>
+      <div class="stat-card">
+        <span class="number">17</span>
+        <span class="label">Credit Hours</span>
+      </div>
+      <div class="stat-card">
+        <span class="number">3</span>
+        <span class="label">Completed</span>
+      </div>
+      <div class="stat-card">
+        <span class="number">2</span>
+        <span class="label">In Progress</span>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features">
+      <div class="feature-card">
+        <div class="icon">📋</div>
+        <h3>Track Courses</h3>
+        <p>View all your enrolled courses with instructor details and credit hours in a clean table.</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon">➕</div>
+        <h3>Add New Courses</h3>
+        <p>Quickly register a new course with full details including name, instructor, credits, and personal notes.</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon">📬</div>
+        <h3>Contact Support</h3>
+        <p>Reach out to academic advisors or support staff directly through the integrated contact form.</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon">📱</div>
+        <h3>Fully Responsive</h3>
+        <p>Access your organizer from any device — desktop, tablet, or mobile — with a seamless experience.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p>&copy; 2026 <span>CourseHub</span>. Personal Course Organizer. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks  = document.getElementById('nav-links');
+    hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
+  </script>
+
+</body>
+</html>

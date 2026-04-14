@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Course Organizer – My Courses</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ===== HEADER / NAV ===== -->
+  <header>
+    <nav>
+      <a href="index.html" class="nav-logo">Course<span>Hub</span></a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="my-courses.html" class="active">My Courses</a></li>
+        <li><a href="add-course.html">Add Course</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ===== MAIN ===== -->
+  <main>
+
+    <section>
+      <div class="page-banner">
+        <h1>My Courses</h1>
+        <p>Spring Semester 2026 — All enrolled courses at a glance.</p>
+      </div>
+
+      <h2 class="section-title">Enrolled Courses</h2>
+      <p class="section-subtitle">Showing 5 courses for the current semester.</p>
+
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Course Name</th>
+              <th>Course Code</th>
+              <th>Instructor</th>
+              <th>Credit Hours</th>
+              <th>Status</th>
+              <th>Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Internet Technology</td>
+              <td>CS301</td>
+              <td>Dr. Ahmed Hassan</td>
+              <td>3</td>
+              <td><span class="badge badge-blue">In Progress</span></td>
+              <td>HTML, CSS, and web fundamentals</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Data Structures</td>
+              <td>CS201</td>
+              <td>Dr. Sara Khalil</td>
+              <td>3</td>
+              <td><span class="badge badge-green">Completed</span></td>
+              <td>Stacks, queues, linked lists, trees</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Discrete Mathematics</td>
+              <td>MATH211</td>
+              <td>Prof. Omar Nasser</td>
+              <td>3</td>
+              <td><span class="badge badge-orange">Midterm Soon</span></td>
+              <td>Logic, sets, graph theory</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>Database Systems</td>
+              <td>CS310</td>
+              <td>Dr. Layla Ibrahim</td>
+              <td>4</td>
+              <td><span class="badge badge-blue">In Progress</span></td>
+              <td>SQL, ER diagrams, normalization</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>Object-Oriented Programming</td>
+              <td>CS220</td>
+              <td>Dr. Youssef Adel</td>
+              <td>4</td>
+              <td><span class="badge badge-green">Completed</span></td>
+              <td>Java, inheritance, polymorphism</td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td>Computer Networks</td>
+              <td>CS401</td>
+              <td>Prof. Mona Farouk</td>
+              <td>3</td>
+              <td><span class="badge badge-purple">Elective</span></td>
+              <td>OSI model, TCP/IP, routing</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div style="margin-top: 28px; text-align: right;">
+        <a href="add-course.html" class="btn btn-primary">+ Add New Course</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p>&copy; 2026 <span>CourseHub</span>. Personal Course Organizer. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks  = document.getElementById('nav-links');
+    hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
+  </script>
+
+</body>
+</html>

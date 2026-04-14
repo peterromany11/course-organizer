@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Course Organizer – Contact Us</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ===== HEADER / NAV ===== -->
+  <header>
+    <nav>
+      <a href="index.html" class="nav-logo">Course<span>Hub</span></a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="my-courses.html">My Courses</a></li>
+        <li><a href="add-course.html">Add Course</a></li>
+        <li><a href="contact.html" class="active">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ===== MAIN ===== -->
+  <main>
+
+    <section>
+      <div class="page-banner">
+        <h1>Contact Us</h1>
+        <p>Have a question or need academic support? We're here to help.</p>
+      </div>
+
+      <div class="contact-grid">
+
+        <!-- Info Cards -->
+        <aside class="contact-info">
+          <div class="contact-item">
+            <div class="ci-icon">📍</div>
+            <div>
+              <h4>University Address</h4>
+              <p>Faculty of Computer Science<br>Main Campus, Building C, Room 204</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="ci-icon">📧</div>
+            <div>
+              <h4>Email Support</h4>
+              <p>academic.support@university.edu<br>advisor@university.edu</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="ci-icon">📞</div>
+            <div>
+              <h4>Phone</h4>
+              <p>+20 2 1234 5678<br>Sun – Thu, 9:00 AM – 4:00 PM</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="ci-icon">🕐</div>
+            <div>
+              <h4>Office Hours</h4>
+              <p>Sunday – Thursday<br>9:00 AM – 4:00 PM</p>
+            </div>
+          </div>
+        </aside>
+
+        <!-- Contact Form -->
+        <div class="contact-form-card">
+          <h2 class="section-title">Send a Message</h2>
+          <p class="section-subtitle">We'll get back to you within 1–2 business days.</p>
+
+          <div style="display:flex; flex-direction:column; gap:18px;">
+
+            <div class="form-group">
+              <label for="c-name">Full Name *</label>
+              <input type="text" id="c-name" placeholder="Your full name" />
+            </div>
+
+            <div class="form-group">
+              <label for="c-id">Student ID *</label>
+              <input type="text" id="c-id" placeholder="e.g. 20220001" />
+            </div>
+
+            <div class="form-group">
+              <label for="c-email">Email Address *</label>
+              <input type="email" id="c-email" placeholder="student@university.edu" />
+            </div>
+
+            <div class="form-group">
+              <label for="c-phone">Phone Number</label>
+              <input type="tel" id="c-phone" placeholder="+20 1XX XXX XXXX" />
+            </div>
+
+            <div class="form-group">
+              <label for="c-subject">Subject *</label>
+              <select id="c-subject">
+                <option value="">-- Select a topic --</option>
+                <option>Course Registration Issue</option>
+                <option>Grade Inquiry</option>
+                <option>Academic Advising</option>
+                <option>Technical Support</option>
+                <option>Other</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="c-message">Message *</label>
+              <textarea id="c-message" placeholder="Describe your issue or question in detail..."></textarea>
+            </div>
+
+            <div class="form-actions">
+              <button type="button" class="btn-submit" onclick="sendMessage()">Send Message</button>
+              <button type="button" class="btn-reset" onclick="resetContact()">Clear</button>
+            </div>
+
+            <div class="success-msg" id="contact-success">
+              ✅ Your message has been sent! We'll respond within 1–2 business days.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p>&copy; 2026 <span>CourseHub</span>. Personal Course Organizer. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks  = document.getElementById('nav-links');
+    hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
+
+    function sendMessage() {
+      const name    = document.getElementById('c-name').value.trim();
+      const email   = document.getElementById('c-email').value.trim();
+      const message = document.getElementById('c-message').value.trim();
+      const id      = document.getElementById('c-id').value.trim();
+
+      if (!name || !email || !message || !id) {
+        alert('Please fill in all required fields (*).');
+        return;
+      }
+
+      document.getElementById('contact-success').style.display = 'block';
+      document.getElementById('contact-success').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function resetContact() {
+      ['c-name','c-id','c-email','c-phone','c-message'].forEach(id => {
+        document.getElementById(id).value = '';
+      });
+      document.getElementById('c-subject').selectedIndex = 0;
+      document.getElementById('contact-success').style.display = 'none';
+    }
+  </script>
+
+</body>
+</html>
