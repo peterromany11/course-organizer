@@ -386,10 +386,17 @@ tbody td {
   gap: 24px;
 }
 
-.form-group {
-  display: flex;
-  flex-direction: column;
-  gap: 7px;
+.form-group {   grid-column: 1 / -1; 
+   justify-self: center;
+   width: 100%;
+   max-width: 480px;              
+   display: flex;
+   flex-direction: column;
+   gap: 7px;
+}
+
+.center-field input {
+  width: 100%;
 }
 
 .form-group.full {
