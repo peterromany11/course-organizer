@@ -389,7 +389,7 @@ tbody td {
 .form-group {
   display: flex;
   flex-direction: column;
-  gap: 7px;
+  gap: 14px;
 }
 
 .form-group.full { grid-column: 1 / -1; }
