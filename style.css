@@ -391,9 +391,6 @@ tbody td {
    justify-self: center;
    width: 100%;
    max-width: 480px;              
-   display: flex;
-   flex-direction: column;
-   gap: 7px;
 }
 
 .center-field input {
