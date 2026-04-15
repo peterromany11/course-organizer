@@ -386,7 +386,13 @@ tbody td {
   gap: 24px;
 }
 
-.form-group {   
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.form-group.hours {   
    grid-column: 1 / -1; 
    justify-self: center;
    width: 100%;
